@@ -98,6 +98,7 @@ img {
   margin-left: auto;
   padding: 1rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 .share__trigger img {
   height: 2rem;
@@ -107,13 +108,17 @@ img {
   position: absolute;
   background-color: var(--clr-primary);
   top: -5rem;
-  right: -50%;
+  right: -60%;
   transform: translateX(-50%);
-  display: flex;
-  align-items: center;
   border-radius: 1rem;
   padding: 1rem 4rem;
   display: none;
+  transition: all 300ms ease;
+}
+.socials.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .socials * {
   margin: 0 1rem;
@@ -128,6 +133,9 @@ img {
     width: 90%;
     margin: 0 auto;
     border-radius: 2rem;
+  }
+  .socials {
+    right: -50%;
   }
 }
 @media (max-width: 600px) {
@@ -160,7 +168,7 @@ img {
     align-items: center;
     bottom: 0;
     width: 100%;
-    top: 30%;
+    top: 0;
     border-radius: 0;
   }
 }
